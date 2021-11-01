@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Reimu>
+    <Bullet id="level1">
+        <speed>1000</speed>
+        <timeBetweenShoot>0.1</timeBetweenShoot>
+        <angle>270</angle>
+        <raycount>1</raycount>
+    </Bullet>
+
+    <Bullet id="level2">
+        <speed>1000</speed>
+        <timeBetweenShoot>0.1</timeBetweenShoot>
+        <angle>270</angle>
+        <raycount>2</raycount>
+    </Bullet>
+
+    <Bullet id="level3">
+        <speed>1000</speed>
+        <timeBetweenShoot>0.1</timeBetweenShoot>
+        <angle>270</angle>
+        <raycount>3</raycount>
+    </Bullet>
+
+    <Bullet id="level4">
+        <speed>1000</speed>
+        <timeBetweenShoot>0.1</timeBetweenShoot>
+        <angle>270</angle>
+        <raycount>5</raycount>
+    </Bullet>
+
+    <Bullet id="level5">
+        <speed>1000</speed>
+        <timeBetweenShoot>0.1</timeBetweenShoot>
+        <angle>300</angle>
+        <raycount>7</raycount>
+    </Bullet>
+</Reimu>

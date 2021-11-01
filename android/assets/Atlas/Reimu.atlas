@@ -1,0 +1,62 @@
+
+Reimu.png
+size: 256, 64
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: xy
+reimu_idle01
+  rotate: false
+  xy: 0, 0
+  size: 25, 45
+  orig: 25, 45
+  offset: 0, 0
+  index: -1
+reimu_idle02
+  rotate: false
+  xy: 27, 0
+  size: 25, 46
+  orig: 25, 46
+  offset: 0, 0
+  index: -1
+reimu_idle03
+  rotate: false
+  xy: 54, 0
+  size: 25, 46
+  orig: 25, 46
+  offset: 0, 0
+  index: -1
+reimu_idle04
+  rotate: false
+  xy: 81, 0
+  size: 27, 44
+  orig: 27, 44
+  offset: 0, 0
+  index: -1
+reimu_idle05
+  rotate: false
+  xy: 108, 0
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+reimu_idle06
+  rotate: false
+  xy: 135, 0
+  size: 25, 43
+  orig: 25, 43
+  offset: 0, 0
+  index: -1
+reimu_idle07
+  rotate: false
+  xy: 162, 0
+  size: 26, 44
+  orig: 26, 44
+  offset: 0, 0
+  index: -1
+reimu_idle08
+  rotate: false
+  xy: 189, 0
+  size: 25, 43
+  orig: 25, 43
+  offset: 0, 0
+  index: -1

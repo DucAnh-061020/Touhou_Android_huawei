@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/menu02"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StageSelectActivity"
+    android:theme="@style/GdxTheme">
+    <Button
+        android:id="@+id/stage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/custom_button"
+        android:text="Stage 1"
+        android:fontFamily="@font/fvf_fernando_08"
+        android:textSize="30dp"
+        android:textColor="#fff"/>
+    <Button
+        android:id="@+id/ReturnStage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_button"
+        android:text="Return"
+        android:fontFamily="@font/fvf_fernando_08"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#fff"/>
+</RelativeLayout>

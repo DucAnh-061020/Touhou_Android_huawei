@@ -1,0 +1,181 @@
+
+skin.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+FVF Fermando
+  rotate: false
+  xy: 1, 27
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+FVF Fermando
+  rotate: false
+  xy: 1, 27
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+slider_knob_1
+  rotate: false
+  xy: 957, 968
+  size: 51, 53
+  orig: 51, 53
+  offset: 0, 0
+  index: -1
+sliderh
+  rotate: false
+  xy: 957, 802
+  size: 38, 164
+  orig: 38, 164
+  offset: 0, 0
+  index: -1
+sliderh_over
+  rotate: false
+  xy: 799, 401
+  size: 38, 164
+  orig: 38, 164
+  offset: 0, 0
+  index: -1
+Artboard 16
+  rotate: false
+  xy: 1, 15
+  size: 82, 10
+  orig: 82, 10
+  offset: 0, 0
+  index: -1
+Artboard 17
+  rotate: false
+  xy: 681, 48
+  size: 82, 10
+  orig: 82, 10
+  offset: 0, 0
+  index: -1
+Button_down
+  rotate: false
+  xy: 643, 607
+  size: 164, 38
+  orig: 164, 38
+  offset: 0, 0
+  index: -1
+Button_up
+  rotate: false
+  xy: 643, 567
+  size: 164, 38
+  orig: 164, 38
+  offset: 0, 0
+  index: -1
+slider
+  rotate: false
+  xy: 643, 567
+  size: 164, 38
+  orig: 164, 38
+  offset: 0, 0
+  index: -1
+Button_up_1
+  rotate: false
+  xy: 515, 20
+  size: 164, 38
+  orig: 164, 38
+  offset: 0, 0
+  index: -1
+slider_before
+  rotate: false
+  xy: 515, 20
+  size: 164, 38
+  orig: 164, 38
+  offset: 0, 0
+  index: -1
+Logo
+  rotate: false
+  xy: 643, 739
+  size: 312, 282
+  orig: 312, 282
+  offset: 0, 0
+  index: -1
+Menu01
+  rotate: false
+  xy: 1, 541
+  size: 640, 480
+  orig: 640, 480
+  offset: 0, 0
+  index: -1
+Menu02
+  rotate: false
+  xy: 515, 60
+  size: 282, 479
+  orig: 282, 479
+  offset: 0, 0
+  index: -1
+Text_box
+  rotate: false
+  xy: 643, 647
+  size: 173, 90
+  orig: 173, 90
+  offset: 0, 0
+  index: -1
+check_off
+  rotate: false
+  xy: 681, 27
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+check_on
+  rotate: false
+  xy: 957, 781
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+list
+  rotate: false
+  xy: 818, 718
+  size: 82, 10
+  orig: 82, 10
+  offset: 0, 0
+  index: -1
+scoll_h
+  rotate: false
+  xy: 799, 316
+  size: 7, 83
+  orig: 7, 83
+  offset: 0, 0
+  index: -1
+scroll_hover
+  rotate: false
+  xy: 997, 855
+  size: 7, 83
+  orig: 7, 83
+  offset: 0, 0
+  index: -1
+scroll_w
+  rotate: false
+  xy: 818, 730
+  size: 83, 7
+  orig: 83, 7
+  offset: 0, 0
+  index: -1
+scroll_wover
+  rotate: false
+  xy: 643, 558
+  size: 83, 7
+  orig: 83, 7
+  offset: 0, 0
+  index: -1
+select_box
+  rotate: false
+  xy: 643, 546
+  size: 82, 10
+  orig: 82, 10
+  offset: 0, 0
+  index: -1
+slider_knob
+  rotate: false
+  xy: 997, 940
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1

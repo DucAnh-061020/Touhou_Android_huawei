@@ -1,0 +1,174 @@
+
+Fairies_debug.png
+size: 256, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+F0A1
+  rotate: false
+  xy: 77, 97
+  size: 28, 30
+  orig: 28, 30
+  offset: 0, 0
+  index: -1
+F0A2
+  rotate: false
+  xy: 107, 97
+  size: 27, 30
+  orig: 27, 30
+  offset: 0, 0
+  index: -1
+F0B1
+  rotate: false
+  xy: 110, 129
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+F0C1
+  rotate: false
+  xy: 68, 166
+  size: 40, 37
+  orig: 40, 37
+  offset: 0, 0
+  index: -1
+F1A1
+  rotate: false
+  xy: 206, 184
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+F1A3
+  rotate: false
+  xy: 2, 2
+  size: 32, 30
+  orig: 32, 30
+  offset: 0, 0
+  index: -1
+F1B1
+  rotate: false
+  xy: 219, 217
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1
+F1C1
+  rotate: false
+  xy: 2, 34
+  size: 39, 34
+  orig: 39, 34
+  offset: 0, 0
+  index: -1
+F1D1
+  rotate: false
+  xy: 2, 156
+  size: 64, 47
+  orig: 64, 47
+  offset: 0, 0
+  index: -1
+FA1
+  rotate: false
+  xy: 141, 113
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+FA2
+  rotate: false
+  xy: 174, 182
+  size: 30, 33
+  orig: 30, 33
+  offset: 0, 0
+  index: -1
+FB1
+  rotate: false
+  xy: 141, 145
+  size: 31, 34
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+FB2
+  rotate: false
+  xy: 44, 71
+  size: 31, 34
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+FC1
+  rotate: false
+  xy: 135, 217
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+FC2
+  rotate: false
+  xy: 68, 129
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+FC3
+  rotate: false
+  xy: 2, 70
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+FD1
+  rotate: false
+  xy: 2, 205
+  size: 65, 47
+  orig: 65, 47
+  offset: 0, 0
+  index: -1
+FDA1
+  rotate: false
+  xy: 206, 152
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+FDB1
+  rotate: false
+  xy: 141, 181
+  size: 31, 34
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+FDC1
+  rotate: false
+  xy: 177, 217
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+FDD1
+  rotate: false
+  xy: 2, 107
+  size: 64, 47
+  orig: 64, 47
+  offset: 0, 0
+  index: -1
+FEA1
+  rotate: false
+  xy: 174, 150
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+FEB1
+  rotate: false
+  xy: 110, 167
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+FED1
+  rotate: false
+  xy: 69, 205
+  size: 64, 47
+  orig: 64, 47
+  offset: 0, 0
+  index: -1

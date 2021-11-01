@@ -1,0 +1,41 @@
+
+ReimuSpell.png
+size: 1024, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+Effectelse
+  rotate: false
+  xy: 260, 116
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Effectelse2
+  rotate: false
+  xy: 2, 116
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ReimuSpell
+  rotate: false
+  xy: 2, 20
+  size: 94, 94
+  orig: 94, 94
+  offset: 0, 0
+  index: -1
+atk_card
+  rotate: false
+  xy: 518, 356
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1
+auto_card
+  rotate: false
+  xy: 2, 2
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1

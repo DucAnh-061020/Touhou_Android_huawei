@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu02"
+    tools:context=".MainMenuActivity"
+    android:theme="@style/GdxTheme">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/touhou_splash"
+            app:srcCompat="@drawable/touhou_splash" />
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Start"
+            android:textSize="30sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/custom_button"
+            android:textColor="#fff"
+            android:fontFamily="@font/fvf_fernando_08"/>
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Option"
+            android:textSize="30sp"
+            android:layout_below="@id/Button1"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/custom_button"
+            android:textColor="#fff"
+            android:fontFamily="@font/fvf_fernando_08"/>
+        <Button
+            android:id="@+id/Button3"
+            android:layout_marginTop="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Exit"
+            android:textSize="30sp"
+            android:layout_below="@id/Button2"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/custom_button"
+            android:textColor="#fff"
+            android:fontFamily="@font/fvf_fernando_08"/>
+    </RelativeLayout>
+</FrameLayout>

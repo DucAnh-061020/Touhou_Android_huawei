@@ -1,0 +1,105 @@
+<Stage1>
+    //parameter multi with world width and height
+    //Wave 1
+    <Wave id="1" timebetweenspawn="1" timebetweenwave="3" numberperspawn="1">
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="3" timebetweenshoot="0.1f" exittime="2"/>
+    </Wave>
+    <Wave id="2" timebetweenspawn="1" timebetweenwave="5" numberperspawn="2">
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>
+    </Wave>
+<!--    <Wave id="3" timebetweenspawn="1" timebetweenwave="5" numberperspawn="2">-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="5" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--    </Wave>-->
+<!--    <Wave id="4" timebetweenspawn="1" timebetweenwave="5" numberperspawn="2">-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--    </Wave>-->
+<!--    <Wave id="5" timebetweenspawn="1" timebetweenwave="5" numberperspawn="3">-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.5f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.75f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--        <F0A1 speed="0.1f" spawnX="0.25f" width="0.1f" height="0.05f" maxbullet="10" timebetweenshoot="0.1f" exittime="3"/>-->
+<!--    </Wave>-->
+</Stage1>

@@ -1,0 +1,48 @@
+
+Itemdrops.png
+size: 64, 32
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+bomb
+  rotate: false
+  xy: 2, 2
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+bpoint
+  rotate: false
+  xy: 38, 4
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+bpowerup
+  rotate: false
+  xy: 2, 14
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+lifeup
+  rotate: false
+  xy: 20, 15
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+powerup
+  rotate: false
+  xy: 38, 18
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+spoint
+  rotate: false
+  xy: 15, 2
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1

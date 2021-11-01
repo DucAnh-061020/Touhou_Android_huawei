@@ -1,0 +1,83 @@
+
+Bullets.png
+size: 256, 32
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+BlueBullet
+  rotate: false
+  xy: 2, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+BlueBullet1
+  rotate: false
+  xy: 21, 4
+  size: 9, 14
+  orig: 9, 14
+  offset: 0, 0
+  index: -1
+CyanBullet
+  rotate: false
+  xy: 40, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+GreenBullet
+  rotate: false
+  xy: 59, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+GreenBullet1
+  rotate: false
+  xy: 78, 4
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+PurpleBullet
+  rotate: false
+  xy: 97, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+PurpleBullet1
+  rotate: false
+  xy: 116, 4
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+RedBullet
+  rotate: false
+  xy: 135, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+RedBullet1
+  rotate: false
+  xy: 154, 4
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+YellowBullet
+  rotate: false
+  xy: 173, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+YellowBullet1
+  rotate: false
+  xy: 192, 4
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
