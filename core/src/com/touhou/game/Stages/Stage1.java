@@ -71,7 +71,7 @@ public class Stage1 implements Screen, InputProcessor {
     FakeBoss boss;
     //item
     private TextureAtlas itemAtlas;
-    private int score = 0;
+    int score = 0;
     private int totalF0A1Wave;
 
     public Stage1(Core p) {
@@ -186,7 +186,8 @@ public class Stage1 implements Screen, InputProcessor {
     private void isGameOver() {
         if(GAME_STATUS == Core.END_STAGE || GAME_STATUS == Core.GAME_OVER){
             pause();
-            parent.callbackListener.closeActivity();
+            Core.Point = score;
+            parent.callbackListener.startActivity(Core.Point);
             parent.changeScreen(Core.GAME_EXIT);
             dispose();
         }

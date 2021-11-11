@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/menu02">
+    <TextView
+        android:id="@+id/txvScoreSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Score:"
+        android:textSize="30sp"
+        android:fontFamily="@font/fvf_fernando_08"/>
+    <TextView
+        android:layout_below="@id/txvScoreSum"
+        android:id="@+id/txvEnterUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter user"
+        android:textSize="30sp"
+        android:fontFamily="@font/fvf_fernando_08"/>
+    <EditText
+        android:id="@+id/edtPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvEnterUser"
+        android:fontFamily="@font/fvf_fernando_08"/>
+    <Button
+        android:id="@+id/btnSaveScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:text="Save data"
+        android:fontFamily="@font/fvf_fernando_08"
+        android:background="@drawable/custom_button"
+        android:textColor="#fff"
+        android:layout_below="@id/edtPlayer"/>
+</RelativeLayout>

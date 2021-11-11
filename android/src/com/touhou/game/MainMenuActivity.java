@@ -38,6 +38,7 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
                 break;
         }
     }
+    
     @Override
     public void onBackPressed() {
         super.onBackPressed();

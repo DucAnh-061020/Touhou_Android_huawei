@@ -1,11 +1,13 @@
 package com.touhou.game;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 
 public class AndroidLauncher extends AndroidApplication implements Core.MyCallbackListener {
+	Intent intent;
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,10 +25,16 @@ public class AndroidLauncher extends AndroidApplication implements Core.MyCallba
 
 	@Override
 	public void startActivity(int result) {
+		ScoreData.point = result;
+		intent = new Intent(AndroidLauncher.this,SaveScoreActivity.class);
+		AndroidLauncher.this.startActivity(intent);
+		finish();
 	}
 
 	@Override
 	public void closeActivity(){
+		intent = new Intent(AndroidLauncher.this,SaveScoreActivity.class);
+		AndroidLauncher.this.startActivity(intent);
 		finish();
 	}
 }

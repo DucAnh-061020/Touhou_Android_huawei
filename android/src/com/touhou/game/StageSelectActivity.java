@@ -29,6 +29,7 @@ public class StageSelectActivity extends Activity implements View.OnClickListene
             case R.id.stage1:
                 intent = new Intent(StageSelectActivity.this,AndroidLauncher.class);
                 StageSelectActivity.this.startActivity(intent);
+                this.finish();
                 break;
         }
     }

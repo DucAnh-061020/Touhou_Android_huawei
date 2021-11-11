@@ -18,7 +18,7 @@ android {
     }
     defaultConfig {
         applicationId "com.touhou.game"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -90,8 +90,11 @@ task run(type: Exec) {
 }
 
 dependencies {
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
 }
 
 eclipse.project.name = appName + "-android"
+apply plugin: 'com.huawei.agconnect'

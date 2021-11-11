@@ -23,6 +23,7 @@ public class Core extends Game {
 	public static float VOLUME = 1;
 	public static Sound shootSE;
 	public static Music bgm;
+	public static int Point;
 
 	public interface MyCallbackListener {
 		void startActivity(int result);
