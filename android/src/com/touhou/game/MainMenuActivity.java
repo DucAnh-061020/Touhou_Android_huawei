@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainMenuActivity extends Activity implements View.OnClickListener{
     Button button;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

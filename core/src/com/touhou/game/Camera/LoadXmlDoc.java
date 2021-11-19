@@ -58,8 +58,6 @@ public class LoadXmlDoc {
             for (int j=0;j < element.getChild(i).getChildCount();j++){
                 details.add(element.getChild(i).getChild(j).getFloatAttribute("speed"));
                 details.add(element.getChild(i).getChild(j).getFloatAttribute("spawnX"));
-                details.add(element.getChild(i).getChild(j).getFloatAttribute("width"));
-                details.add(element.getChild(i).getChild(j).getFloatAttribute("height"));
                 details.add(element.getChild(i).getChild(j).getFloatAttribute("maxbullet"));
                 details.add(element.getChild(i).getChild(j).getFloatAttribute("timebetweenshoot"));
                 details.add(element.getChild(i).getChild(j).getFloatAttribute("exittime"));

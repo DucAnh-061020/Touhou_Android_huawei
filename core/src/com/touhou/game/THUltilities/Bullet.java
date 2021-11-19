@@ -1,5 +1,6 @@
 package com.touhou.game.THUltilities;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
@@ -19,13 +20,15 @@ public class Bullet {
 
     public Bullet(float speed,
                   float xPos, float yPos,
-                  float width, float height,
                   TextureRegion textureRegion,float angle, float direction) {
         this.angle = angle;
         this.speed = speed;
         this.direction = direction;
-        boundingBox = new Rectangle(xPos,yPos,width,height);
         this.textureRegion = textureRegion;
+        boundingBox = new Rectangle(xPos,yPos,
+                textureRegion.getRegionWidth()* Gdx.graphics.getDensity(),
+                textureRegion.getRegionHeight()* Gdx.graphics.getDensity()
+                );
         ttl=0;
     }
 

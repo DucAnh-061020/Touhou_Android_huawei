@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.touhou.game.THUltilities.Bullet;
 import com.touhou.game.THUltilities.FireStyle;
 import com.touhou.game.THUltilities.MoveStyle;
@@ -17,14 +19,21 @@ public class FakeBoss extends Boss {
     //to control bullet fire style
     FireStyle fireStyle;
 
-    public FakeBoss(float speed, float width, float height, float xPos, float yPos, TextureAtlas textureAtlas, TextureAtlas bulletAtlas) {
-        super(speed, width, height, xPos, yPos, textureAtlas, bulletAtlas);
+    public FakeBoss(float speed, float xPos, float yPos, TextureAtlas textureAtlas, TextureAtlas bulletAtlas) {
+        super(speed, textureAtlas, bulletAtlas);
         textureRegion = textureAtlas.findRegion("FED1");
         bulletRegion = bulletAtlas.findRegion("BlueBullet");
         timeBettweenShoot = 0.3f;
         hp = maxHP = 1000.0f;
         tll = 0.0f;
         timeTillSpawn = 3.0f;
+        boundingBox = new Rectangle(xPos,yPos,
+                Gdx.graphics.getDensity()*textureRegion.getRegionWidth(),
+                Gdx.graphics.getDensity()*textureRegion.getRegionHeight());
+        centerBossVector = new Vector2(
+                boundingBox.x + boundingBox.width/2,
+                boundingBox.y + boundingBox.height/2
+        );
     }
 
     @Override
@@ -36,11 +45,13 @@ public class FakeBoss extends Boss {
     public Bullet[] fire() {
         timeSinceLastShoot = 0;
         if(hp >= maxHP/2){
-            Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,boundingBox.width/6,boundingBox.width/4,bulletRegion,80,90);
+            Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
+                    bulletRegion,80,90);
             fireStyle = new FireStyle(bullet);
             return fireStyle.spreedShoot(10,3);
         }
-        Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,boundingBox.width/6,boundingBox.width/4,bulletRegion,90,90);
+        Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
+                bulletRegion,90,90);
         fireStyle = new FireStyle(bullet);
         return fireStyle.circleShoot(30);
     }

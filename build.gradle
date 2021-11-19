@@ -10,7 +10,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath 'com.huawei.agconnect:agcp:1.5.2.300'
+        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
     }
 }
 
@@ -89,3 +89,4 @@ project(":core") {
         compile 'com.github.raeleus.TenPatch:tenpatch:5.2.2'
     }
 }
+

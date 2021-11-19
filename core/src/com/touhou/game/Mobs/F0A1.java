@@ -1,8 +1,10 @@
 package com.touhou.game.Mobs;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.touhou.game.THUltilities.Bullet;
 import com.touhou.game.THUltilities.MoveStyle;
@@ -22,11 +24,19 @@ public class F0A1 extends Fairies {
                     UPLEFT = "upleft",UPRIGHT = "upright",
                     UP="up",DOWN="down",LEFT="left",RIGHT="right";
 
-    public F0A1(float speed, float xPos, float yPos, float width, float height, TextureAtlas fairyAtlas, TextureAtlas bulletAtlas, float maxbullet) {
-        super(speed,xPos,yPos,width,height,fairyAtlas,bulletAtlas,maxbullet);
+    public F0A1(float speed, float xPos, float yPos, TextureAtlas fairyAtlas, TextureAtlas bulletAtlas, float maxbullet) {
+        super(speed,fairyAtlas,bulletAtlas,maxbullet);
         fairyRegion = fairyAtlas.findRegion("F0A1");
+        boundingBox = new Rectangle(
+                xPos,yPos,
+                fairyRegion.getRegionWidth()* Gdx.graphics.getDensity(),
+                fairyRegion.getRegionHeight()* Gdx.graphics.getDensity());
         bulletRegion = bulletAtlas.findRegion("BlueBullet");
         directionVector = new Vector2(0,-1);
+        centerFairesVector = new Vector2(
+                boundingBox.x+boundingBox.width/2,
+                boundingBox.y+boundingBox.height/2
+        );
     }
 
     @Override
@@ -40,9 +50,9 @@ public class F0A1 extends Fairies {
     public Bullet[] fire() {
         timeSinceLastShoot = 0;
         Bullet[] bullets = new Bullet[3];
-        bullets[0] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,boundingBox.width/3,boundingBox.width/3,bulletRegion,90,0);
-        bullets[1] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,boundingBox.width/3,boundingBox.width/3,bulletRegion,95,0);
-        bullets[2] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,boundingBox.width/3,boundingBox.width/3,bulletRegion,85,0);
+        bullets[0] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0);
+        bullets[1] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,95,0);
+        bullets[2] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,85,0);
         return bullets;
     }
 

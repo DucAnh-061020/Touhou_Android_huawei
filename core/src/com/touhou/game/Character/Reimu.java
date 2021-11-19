@@ -1,5 +1,6 @@
 package com.touhou.game.Character;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -33,8 +34,7 @@ public class Reimu extends Player{
     private Bullet normalAmulet;
     private Bullet chaseAmulet;
 
-    public Reimu(float xPos, float yPos,
-                 float width, float height) {
+    public Reimu(float xPos, float yPos) {
         playerAtlas = new TextureAtlas("Atlas/Reimu.atlas");
         playerTexture = new TextureRegion[8];
         playerTexture[0] = playerAtlas.findRegion("reimu_idle01");
@@ -46,7 +46,9 @@ public class Reimu extends Player{
         playerTexture[6] = playerAtlas.findRegion("reimu_idle07");
         playerTexture[7] = playerAtlas.findRegion("reimu_idle08");
         idle = new Animation(1f/8f, playerTexture);
-        boundingBox = new Rectangle(xPos/2,yPos/8,width,height);
+        boundingBox = new Rectangle(xPos,yPos,
+                playerTexture[0].getRegionWidth()* Gdx.graphics.getDensity(),
+                playerTexture[0].getRegionHeight()*Gdx.graphics.getDensity());
 //        bulletInfo = LoadXmlDoc.characterBulletInfo("gameData/ReimuBullet.xml");
         playerBulletAtlas = new TextureAtlas("Atlas/ReimuSpell.atlas");
         spellC = playerBulletAtlas.findRegion("ReimuSpell");
@@ -108,7 +110,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*.6f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -116,7 +117,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x,
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -127,7 +127,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*1.2f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -136,7 +135,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x - (boundingBox.width*0.6f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -145,7 +143,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*.3f),
                         boundingBox.y+boundingBox.height*.7f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -155,7 +152,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*.6f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -164,7 +160,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*1.2f),
                         boundingBox.y+boundingBox.height*.3f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -173,7 +168,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x,
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -182,7 +176,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x-(boundingBox.width*.6f),
                         boundingBox.y+boundingBox.height*.3f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -190,8 +183,6 @@ public class Reimu extends Player{
                 break;
             case 7:
                 normalAmulet = new Bullet(bSpeed,
-                        boundingBox.x+(boundingBox.width*1.2f),
-                        boundingBox.y+boundingBox.height*.5f,
                         boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
@@ -201,7 +192,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x - (boundingBox.width*0.6f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -210,7 +200,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*.3f),
                         boundingBox.y+boundingBox.height*.7f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -219,7 +208,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*1.8f),
                         boundingBox.y+boundingBox.height*.3f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -228,7 +216,6 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x - (boundingBox.width*1.2f),
                         boundingBox.y+boundingBox.height*.3f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -238,7 +225,7 @@ public class Reimu extends Player{
                 normalAmulet = new Bullet(bSpeed,
                         boundingBox.x+(boundingBox.width*.3f),
                         boundingBox.y+boundingBox.height*.5f,
-                        boundingBox.width/2, boundingBox.width*0.7f,
+
                         normalAmuletTexture, -90,90);
                 fireStyle = new FireStyle(normalAmulet);
                 bullets = fireStyle.singleShoot();
@@ -255,8 +242,8 @@ public class Reimu extends Player{
         timeSinceLastSpecial = 0;
         if(power >= 10){
             chaseAmulet = new Bullet(bSpeed,
-                    boundingBox.x+(boundingBox.width*1.3f),boundingBox.y+boundingBox.height*.4f,
-                    boundingBox.width/2, boundingBox.width*0.7f,
+                    boundingBox.x+(boundingBox.width*1.3f),
+                    boundingBox.y+boundingBox.height*.4f,
                     chaseAmuletTexture, -30,30);
             fireStyle = new FireStyle(chaseAmulet);
             Bullet[] bullets = fireStyle.chaseShoot(1,30);
@@ -266,7 +253,6 @@ public class Reimu extends Player{
             chaseAmulet = new Bullet(bSpeed,
                     boundingBox.x-(boundingBox.width*1.6f),
                     boundingBox.y+boundingBox.height*.4f,
-                    boundingBox.width/2, boundingBox.width*0.7f,
                     chaseAmuletTexture, -150,150);
             fireStyle = new FireStyle(chaseAmulet);
             bullets = fireStyle.chaseShoot(1,30);

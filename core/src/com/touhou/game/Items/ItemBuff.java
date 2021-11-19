@@ -21,7 +21,6 @@ public abstract class ItemBuff {
     TextureAtlas itemAtlas;
 
     public ItemBuff(float xPox, float yPox, float width, float height, TextureAtlas itemAtlas){
-        boundingBox = new Rectangle(xPox,yPox,width,height);
         this.itemAtlas = itemAtlas;
     }
 

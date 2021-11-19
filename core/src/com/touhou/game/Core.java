@@ -20,7 +20,8 @@ public class Core extends Game {
 	public static final int GAME_OVER = 9;
 	public static final int END_STAGE = 10;
 
-	public static float VOLUME = 1;
+	public static float VOLUMESFX = 1;
+	public static  float VOLUMEBGM = 1;
 	public static Sound shootSE;
 	public static Music bgm;
 	public static int Point;

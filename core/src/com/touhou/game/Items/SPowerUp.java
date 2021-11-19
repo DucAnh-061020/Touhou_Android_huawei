@@ -1,7 +1,9 @@
 package com.touhou.game.Items;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.Rectangle;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -14,6 +16,9 @@ public class SPowerUp extends ItemBuff {
         super(xPox, yPox, width, height, itemAtlas);
         item = itemAtlas.findRegion("powerup");
         type = ItemBuff.SPOWERUP;
+        boundingBox = new Rectangle(xPox,yPox,
+                item.getRegionWidth()* Gdx.graphics.getDensity(),
+                item.getRegionHeight()* Gdx.graphics.getDensity());
     }
 
     public static void renderPowerup(SpriteBatch batch, float deltaTime, float gameWidth, float gameHeight){

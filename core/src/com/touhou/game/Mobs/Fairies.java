@@ -29,16 +29,11 @@ public abstract class Fairies {
     //bullet
     public float timeSinceLastShoot = 0,timeBetweenShoot = .3f;
 
-    public Fairies(float speed, float xPos,float yPos, float width,float height,TextureAtlas fairyAtlas,TextureAtlas bulletAtlas,float maxbullet) {
+    public Fairies(float speed,TextureAtlas fairyAtlas,TextureAtlas bulletAtlas,float maxbullet) {
         this.speed = speed;
-        boundingBox = new Rectangle(xPos,yPos,width,height);
         this.fairyAtlas = fairyAtlas;
         this.bulletAtlas = bulletAtlas;
         this.maxbullet = maxbullet;
-        centerFairesVector = new Vector2(
-                boundingBox.x+boundingBox.width/2,
-                boundingBox.y+boundingBox.height/2
-        );
     }
 
     public void update(float deltaTime){

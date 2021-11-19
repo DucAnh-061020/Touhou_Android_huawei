@@ -13,7 +13,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.touhou.game.Camera.HUDScreen;
+import com.touhou.game.Camera.ItemScreen;
 import com.touhou.game.Camera.LoadXmlDoc;
 import com.touhou.game.Camera.PauseScreen;
 import com.touhou.game.Character.Reimu;
@@ -45,7 +45,8 @@ public class Stage1 implements Screen, InputProcessor {
     private TextureAtlas bulletAtlas,fairiesAtlas;
     private TextureRegion[] backgroundTextureRegion;
     private float elapseTime;
-    private HUDScreen hud;
+//    private HUDScreen hud;
+    private ItemScreen itemScreen;
     private PauseScreen pauseScreen;
     private Camera camera;
 
@@ -95,7 +96,7 @@ public class Stage1 implements Screen, InputProcessor {
             backgroundOffset[layer] = gameHeight +backgroundTextureRegion[layer].getRegionHeight();
         }
         //player
-        player = new Reimu(gameWidth, gameHeight, gameWidth /20, gameHeight /16);
+        player = new Reimu(gameWidth/2, gameHeight/8);
         //item
         itemAtlas = new TextureAtlas("Atlas/Itemdrops.atlas");
         //enemies
@@ -104,11 +105,12 @@ public class Stage1 implements Screen, InputProcessor {
         //create mob waves
         createF0A1Waves();
         //boss
-        boss = new FakeBoss(gameHeight*0.7f,gameWidth*0.25f,gameHeight*0.1f,gameWidth*0.5f - (gameWidth*0.25f)/2,gameHeight+gameHeight*0.2f,fairiesAtlas,bulletAtlas);
+        boss = new FakeBoss(gameHeight*0.7f,gameWidth*0.5f - (gameWidth*0.25f)/2,gameHeight+gameHeight*0.2f,fairiesAtlas,bulletAtlas);
         SPowerUp.sPowerUpLinkedList = new LinkedList<>();
         BPoint.bPointLinkedList = new LinkedList<>();
         batch = new SpriteBatch();
-        hud = new HUDScreen(batch,viewport);
+//        hud = new HUDScreen(batch,viewport);
+        itemScreen = new ItemScreen(batch,viewport);
         pauseScreen = new PauseScreen(batch);
         player.setSpeed(gameHeight/2);
         Core.shootSE = Gdx.audio.newSound(Gdx.files.internal("SE/shotA.wav"));
@@ -125,7 +127,8 @@ public class Stage1 implements Screen, InputProcessor {
     @Override
     public void show() {
         Core.bgm.play();
-        Core.bgm.setVolume(Core.VOLUME);
+        Core.bgm.setVolume(Core.VOLUMESFX);
+        Core.bgm.setVolume(Core.VOLUMEBGM);
     }
 
     @Override
@@ -167,11 +170,14 @@ public class Stage1 implements Screen, InputProcessor {
                 BPoint.renderBPoint(batch, delta, gameWidth, gameHeight); // create buffs on kill
                 //detect collisions
                 detectCollisions();
-                hud.update(score, player.lives);
+//                hud.update(score, player.lives);
+                itemScreen.update(player.lives,player.power,score);
                 batch.end();
                 batch.setProjectionMatrix(camera.combined);
-                hud.stage.act(delta);
-                hud.stage.draw();
+//                hud.stage.act(delta);
+//                hud.stage.draw();
+                itemScreen.stage.act(delta);
+                itemScreen.stage.draw();
                 pauseScreen.setVisible(false);
             }break;
             case Core.GAME_PAUSE:{
@@ -224,8 +230,7 @@ public class Stage1 implements Screen, InputProcessor {
             for (int j = 0; j < f0A1WaveInfo.get(i).size(); j++){
                 // create new mob
                 f0A1Array[arraycount] = new F0A1(gameHeight* f0A1WaveInfo.get(i).get(j++),
-                        gameWidth* f0A1WaveInfo.get(i).get(j++),gameHeight-gameWidth* f0A1WaveInfo.get(i).get(j),
-                        gameWidth* f0A1WaveInfo.get(i).get(j++),gameHeight* f0A1WaveInfo.get(i).get(j++),
+                        gameWidth* f0A1WaveInfo.get(i).get(j++),gameHeight,
                         fairiesAtlas,bulletAtlas, f0A1WaveInfo.get(i).get(j++));
                 f0A1Array[arraycount].timeBetweenShoot = f0A1WaveInfo.get(i).get(j++);
 
@@ -427,9 +432,13 @@ public class Stage1 implements Screen, InputProcessor {
                         iterator.remove();
                     }catch (Exception e){}
                     player.lives--;
-                    player.power -= 10;
+                    if(player.power > 10)
+                        player.power -= 10;
+                    else
+                        player.power = 1;
                     player.imoFrame = 3.0f;
-                    player.powerLevel = player.powerLevel/10;
+                    if(player.powerLevel > 0)
+                        player.powerLevel =-1;
                 }
             }
         }
@@ -492,7 +501,8 @@ public class Stage1 implements Screen, InputProcessor {
     @Override
     public void resize(int width, int height) {
         viewport.update(width,height,true);
-        hud.stage.getViewport().update(width, height);
+//        hud.stage.getViewport().update(width, height);
+        itemScreen.stage.getViewport().update(width,height);
     }
 
     @Override
@@ -512,7 +522,8 @@ public class Stage1 implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
-        hud.dispose();
+//        hud.dispose();
+        itemScreen.dispose();
         pauseScreen.dispose();
         Core.shootSE.dispose();
         Core.bgm.dispose();

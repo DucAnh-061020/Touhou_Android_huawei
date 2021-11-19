@@ -25,16 +25,11 @@ public abstract class Boss {
     TextureRegion textureRegion;
     TextureAtlas textureAtlas,bulletAtlas;
 
-    public Boss(float speed, float width, float height, float xPos, float yPos, TextureAtlas textureAtlas, TextureAtlas bulletAtlas) {
+    public Boss(float speed, TextureAtlas textureAtlas, TextureAtlas bulletAtlas) {
         this.speed = speed;
-        this.boundingBox = new Rectangle(xPos,yPos,width,height);
         this.textureAtlas = textureAtlas;
         this.bulletAtlas = bulletAtlas;
         currentState = NOT_SPAWN;
-        centerBossVector = new Vector2(
-                boundingBox.x + boundingBox.width/2,
-                boundingBox.y + boundingBox.height/2
-        );
     }
 
     public void update(float deltaTime){

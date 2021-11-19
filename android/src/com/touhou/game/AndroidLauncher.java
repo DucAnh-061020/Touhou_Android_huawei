@@ -13,6 +13,15 @@ public class AndroidLauncher extends AndroidApplication implements Core.MyCallba
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		initialize(new Core(1,this), config);
+
+		if(!AppSetting.SFX){
+			Core.VOLUMESFX = 0;
+		}
+		Core.VOLUMESFX = 1;
+		if(!AppSetting.BGM){
+			Core.VOLUMEBGM = 0;
+		}
+		Core.VOLUMEBGM = 1;
 	}
 
 	@Override
