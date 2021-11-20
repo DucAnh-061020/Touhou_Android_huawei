@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.touhou.game.THUltilities.Bullet;
+import com.touhou.game.THUltilities.FireStyle;
 import com.touhou.game.THUltilities.MoveStyle;
 
 import java.util.LinkedList;
@@ -43,17 +44,31 @@ public class F0A1 extends Fairies {
     public boolean canFire() {
         if(this.maxbullet == 0)
             return false;
+        if(ttl > 0){
+            return false;
+        }
         return (timeSinceLastShoot - timeBetweenShoot) >= 0;
     }
 
     @Override
     public Bullet[] fire() {
         timeSinceLastShoot = 0;
-        Bullet[] bullets = new Bullet[3];
-        bullets[0] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0);
-        bullets[1] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,95,0);
-        bullets[2] = new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,85,0);
-        return bullets;
+        if(id > 49){
+            fireStyle = new FireStyle(new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0));
+            return fireStyle.circleShoot(50);
+        }
+        if(id > 29){
+            fireStyle = new FireStyle(new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0));
+            return fireStyle.spreedShoot(360/maxbullet,(int) maxbullet);
+        }
+        if(id >9){
+            fireStyle = new FireStyle(new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0));
+            if(id%2 == 0)
+                return fireStyle.spreedShoot(-30,5);
+            return fireStyle.spreedShoot(30,5);
+        }
+        fireStyle = new FireStyle(new Bullet(1000,boundingBox.x+boundingBox.width*.6f,boundingBox.y+10,bulletRegion,90,0));
+        return fireStyle.singleShoot();
     }
 
     public void renderF0A1Bullet(SpriteBatch batch, float deltaTime, float gameHeight, float gameWidth) {

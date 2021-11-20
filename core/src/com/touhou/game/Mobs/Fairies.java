@@ -7,6 +7,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.touhou.game.Stages.Stage1;
 import com.touhou.game.THUltilities.Bullet;
+import com.touhou.game.THUltilities.FireStyle;
 
 public abstract class Fairies {
     public float speed;
@@ -15,6 +16,7 @@ public abstract class Fairies {
     public static final int NOT_SPAWN = 2;
     public static final int DESPAWN = 3;
     public int currentState = NOT_SPAWN;
+    public int id;
     //position & dimension
     public Rectangle boundingBox;
     public float maxbullet;
@@ -28,6 +30,7 @@ public abstract class Fairies {
 
     //bullet
     public float timeSinceLastShoot = 0,timeBetweenShoot = .3f;
+    public FireStyle fireStyle;
 
     public Fairies(float speed,TextureAtlas fairyAtlas,TextureAtlas bulletAtlas,float maxbullet) {
         this.speed = speed;

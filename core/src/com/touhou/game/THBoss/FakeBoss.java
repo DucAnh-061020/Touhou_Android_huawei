@@ -15,6 +15,7 @@ import java.util.ListIterator;
 public class FakeBoss extends Boss {
     private float timeBettweenShoot;
     private TextureRegion bulletRegion;
+    private String moveStyle;
 
     //to control bullet fire style
     FireStyle fireStyle;
@@ -45,12 +46,12 @@ public class FakeBoss extends Boss {
     public Bullet[] fire() {
         timeSinceLastShoot = 0;
         if(hp >= maxHP/2){
-            Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
+            Bullet bullet = new Bullet(speed*2,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
                     bulletRegion,80,90);
             fireStyle = new FireStyle(bullet);
             return fireStyle.spreedShoot(10,3);
         }
-        Bullet bullet = new Bullet(speed,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
+        Bullet bullet = new Bullet(speed*2,boundingBox.x+boundingBox.width*.55f,boundingBox.y+boundingBox.height*.5f,
                 bulletRegion,90,90);
         fireStyle = new FireStyle(bullet);
         return fireStyle.circleShoot(30);
@@ -59,9 +60,47 @@ public class FakeBoss extends Boss {
     @Override
     public void update(float deltaTime) {
         super.update(deltaTime);
-        if(currentState == Boss.IS_SPAWNED){
-            if(boundingBox.y > Gdx.graphics.getHeight()* 3/4 )
-                MoveStyle.moveDown(deltaTime,boundingBox, speed);
+        switch (currentState){
+            case Boss.IS_SPAWNED:{
+                switch (moveStyle){
+                    case "moveRight":
+                        MoveStyle.moveToRight(deltaTime,boundingBox,speed);
+                        break;
+                    case "moveLeft":
+                        MoveStyle.moveToLeft(deltaTime,boundingBox,speed);
+                        break;
+                    case "spawn":
+                        moveStyle = "moveLeft";
+                        break;
+                    case "standCenter":
+                        if(boundingBox.x > (Gdx.graphics.getWidth()/2)-boundingBox.width/2){
+                            MoveStyle.moveToLeft(deltaTime,boundingBox,speed);
+                        }
+                        if(boundingBox.x < (Gdx.graphics.getWidth()/2)-boundingBox.width/2){
+                            MoveStyle.moveToRight(deltaTime,boundingBox,speed);
+                        }
+                        break;
+                }
+                if(hp >= maxHP/2){
+                    if (boundingBox.x <= boundingBox.width) {
+                        moveStyle = "moveRight";
+                    }
+                    if (boundingBox.x >= Gdx.graphics.getWidth() - boundingBox.width) {
+                        moveStyle = "moveLeft";
+                    }
+                }else{
+                    moveStyle = "standCenter";
+                }
+                break;
+            }
+            case Boss.JUST_SPAWN:
+                if(boundingBox.y > Gdx.graphics.getHeight()* 9/10){
+                    MoveStyle.moveDown(deltaTime,boundingBox, speed);
+                    moveStyle = "spawn";
+                }else{
+                    currentState = Boss.IS_SPAWNED;
+                }
+                break;
         }
     }
 

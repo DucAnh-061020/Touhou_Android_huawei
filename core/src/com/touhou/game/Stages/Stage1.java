@@ -96,7 +96,7 @@ public class Stage1 implements Screen, InputProcessor {
             backgroundOffset[layer] = gameHeight +backgroundTextureRegion[layer].getRegionHeight();
         }
         //player
-        player = new Reimu(gameWidth/2, gameHeight/8);
+        player = new Reimu(gameWidth/2, gameHeight/10);
         //item
         itemAtlas = new TextureAtlas("Atlas/Itemdrops.atlas");
         //enemies
@@ -105,7 +105,7 @@ public class Stage1 implements Screen, InputProcessor {
         //create mob waves
         createF0A1Waves();
         //boss
-        boss = new FakeBoss(gameHeight*0.7f,gameWidth*0.5f - (gameWidth*0.25f)/2,gameHeight+gameHeight*0.2f,fairiesAtlas,bulletAtlas);
+        boss = new FakeBoss(gameWidth*0.3f,gameWidth/2,gameHeight,fairiesAtlas,bulletAtlas);
         SPowerUp.sPowerUpLinkedList = new LinkedList<>();
         BPoint.bPointLinkedList = new LinkedList<>();
         batch = new SpriteBatch();
@@ -257,8 +257,9 @@ public class Stage1 implements Screen, InputProcessor {
                         }
                         f0A1Array[arraycount].exitRoute = F0A1.DOWNRIGHT;break;
                     default:
-                        f0A1Array[arraycount].exitRoute = F0A1.RIGHT;break;
+                        f0A1Array[arraycount].exitRoute = F0A1.DOWN;break;
                 }
+                f0A1Array[arraycount].id = arraycount;
                 // add time till despawn/exit
                 f0A1Array[arraycount++].ttl = f0A1WaveInfo.get(i).get(j);
             }
@@ -291,7 +292,7 @@ public class Stage1 implements Screen, InputProcessor {
         }
         if(waveF0A1Counter == totalF0A1Wave){
             if((boss.waitTime+=deltaTime) >= boss.timeTillSpawn){
-                boss.currentState = Boss.IS_SPAWNED;
+                boss.currentState = Boss.JUST_SPAWN;
                 waveF0A1Counter++;
             }
         }
@@ -319,10 +320,19 @@ public class Stage1 implements Screen, InputProcessor {
 
     private void updateEnemy(float deltaTime){
         for (F0A1 _this: f0A1Array) {
-            //is spawned
-            if(_this.currentState == F0A1.IS_SPAWNED){
-                _this.update(deltaTime);
-                _this.draw(batch);
+            switch (_this.currentState){
+                case F0A1.IS_SPAWNED:
+                    if (_this.boundingBox.x >= gameWidth + _this.boundingBox.width || _this.boundingBox.x <= -_this.boundingBox.width) {
+                        _this.currentState = F0A1.DESPAWN;
+                    }
+                    if (_this.boundingBox.y >= gameHeight + _this.boundingBox.height || _this.boundingBox.y <= -_this.boundingBox.height) {
+                        _this.currentState = F0A1.DESPAWN;
+                    }
+                    _this.update(deltaTime);
+                    _this.draw(batch);
+                    break;
+                default:
+                    break;
             }
             _this.renderF0A1Bullet(batch,deltaTime,gameHeight,gameWidth);
         }
@@ -437,6 +447,8 @@ public class Stage1 implements Screen, InputProcessor {
                     else
                         player.power = 1;
                     player.imoFrame = 3.0f;
+                    player.boundingBox.x = gameWidth/2-player.boundingBox.width;
+                    player.boundingBox.y = gameHeight/10;
                     if(player.powerLevel > 0)
                         player.powerLevel =-1;
                 }
@@ -451,9 +463,15 @@ public class Stage1 implements Screen, InputProcessor {
                     iterator.remove();
                 }catch (Exception e){}
                 player.lives--;
-                player.power -= 10;
-                player.imoFrame = 3.0f;
-                player.powerLevel = player.powerLevel/10;
+                if(player.power > 10)
+                    player.power -= 10;
+                else
+                    player.power = 1;
+                player.imoFrame = 10000.0f;
+                player.boundingBox.x = gameWidth/2-player.boundingBox.width;
+                player.boundingBox.y = gameHeight/10;
+                if(player.powerLevel > 0)
+                    player.powerLevel =-1;
             }
         }
         //when collect item

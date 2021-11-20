@@ -11,7 +11,7 @@ import java.util.LinkedList;
 
 public abstract class Boss {
 
-    public static final int IS_SPAWNED = 0,IS_DESTROY = 1,NOT_SPAWN = 2;
+    public static final int IS_SPAWNED = 0,IS_DESTROY = 1,NOT_SPAWN = 2,JUST_SPAWN = 3;
     public float speed;
     public float immortalFrame = 0;
     public Rectangle boundingBox;
@@ -20,7 +20,7 @@ public abstract class Boss {
     public float maxHP,timeTillSpawn,tll,waitTime,hp;
     public Vector2 centerBossVector;
     public LinkedList<Bullet> bossBulletList = new LinkedList<>();
-
+    public float timePerMovePhase = 0,movePhaseTimer = 0;
     //graphics
     TextureRegion textureRegion;
     TextureAtlas textureAtlas,bulletAtlas;
