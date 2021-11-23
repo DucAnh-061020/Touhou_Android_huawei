@@ -16,7 +16,7 @@ import java.util.ListIterator;
 public class F0A1 extends Fairies {
 
     TextureRegion bulletRegion;
-    public int hp = 100;
+    public int hp = 1;
     public LinkedList<Bullet> F0A1BulletList = new LinkedList<>();
     public String exitRoute="up";
     ListIterator<Bullet> iterator;

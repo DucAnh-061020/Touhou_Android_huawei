@@ -25,6 +25,7 @@ import com.touhou.game.Mobs.Fairies;
 import com.touhou.game.THBoss.Boss;
 import com.touhou.game.THBoss.FakeBoss;
 import com.touhou.game.THUltilities.Bullet;
+import com.touhou.game.THUltilities.Explosions;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -42,7 +43,7 @@ public class Stage1 implements Screen, InputProcessor {
 
     //graphics
     private SpriteBatch batch;
-    private TextureAtlas bulletAtlas,fairiesAtlas;
+    private TextureAtlas bulletAtlas,fairiesAtlas,explotionAtlas;
     private TextureRegion[] backgroundTextureRegion;
     private float elapseTime;
 //    private HUDScreen hud;
@@ -67,7 +68,7 @@ public class Stage1 implements Screen, InputProcessor {
     //f0a1 mobs
     private F0A1[] f0A1Array;
     private int currentF0A1spawn = 0;
-
+    private LinkedList<Explosions> explosionsListIterator;
     //boss
     FakeBoss boss;
     //item
@@ -95,6 +96,7 @@ public class Stage1 implements Screen, InputProcessor {
         for(int layer = 1; layer < backgroundTextureRegion.length; layer++){
             backgroundOffset[layer] = gameHeight +backgroundTextureRegion[layer].getRegionHeight();
         }
+        explosionsListIterator = new LinkedList<>();
         //player
         player = new Reimu(gameWidth/2, gameHeight/10);
         //item
@@ -102,6 +104,7 @@ public class Stage1 implements Screen, InputProcessor {
         //enemies
         fairiesAtlas = new TextureAtlas("Atlas/Fairies.atlas");
         bulletAtlas = new TextureAtlas("Atlas/Bullets.atlas");
+        explotionAtlas = new TextureAtlas("Atlas/Explosion.atlas");
         //create mob waves
         createF0A1Waves();
         //boss
@@ -172,6 +175,7 @@ public class Stage1 implements Screen, InputProcessor {
                 detectCollisions();
 //                hud.update(score, player.lives);
                 itemScreen.update(player.lives,player.power,score);
+                renderExplotions(batch);
                 batch.end();
                 batch.setProjectionMatrix(camera.combined);
 //                hud.stage.act(delta);
@@ -385,6 +389,7 @@ public class Stage1 implements Screen, InputProcessor {
                         }catch (Exception e){}
                         if ((f0a1.hp -= player.normalAmuletDmg) <= 0) {
                             f0a1.currentState = F0A1.IS_DESTROY;
+                            explosionsListIterator.add(new Explosions(explotionAtlas,f0a1.boundingBox.x,f0a1.boundingBox.y,f0a1.boundingBox.width));
                             score += 100;
                             createSPowerUp(f0a1.boundingBox.x, f0a1.boundingBox.y, f0a1.boundingBox.width);
                             createBPoint(f0a1.boundingBox.x, f0a1.boundingBox.y, f0a1.boundingBox.width);
@@ -415,6 +420,7 @@ public class Stage1 implements Screen, InputProcessor {
                     }catch(Exception e){}
                     if ((f0a1.hp -= player.normalAmuletDmg) <= 0) {
                         f0a1.currentState = F0A1.IS_DESTROY;
+                        explosionsListIterator.add(new Explosions(explotionAtlas,f0a1.boundingBox.x,f0a1.boundingBox.y,f0a1.boundingBox.width));
                         score += 100;
                         createSPowerUp(f0a1.boundingBox.x, f0a1.boundingBox.y, f0a1.boundingBox.width);
                         createBPoint(f0a1.boundingBox.x, f0a1.boundingBox.y, f0a1.boundingBox.width);
@@ -516,6 +522,18 @@ public class Stage1 implements Screen, InputProcessor {
         }
     }
 
+    private void renderExplotions(SpriteBatch batch){
+        ListIterator<Explosions> iteratorList = explosionsListIterator.listIterator();
+        while (iteratorList.hasNext()){
+            Explosions explosions = iteratorList.next();
+            if(explosions.isFinish()){
+                iteratorList.remove();
+            }
+            explosions.update(Gdx.graphics.getDeltaTime());
+            explosions.drawAnimation(batch);
+        }
+    }
+
     @Override
     public void resize(int width, int height) {
         viewport.update(width,height,true);
@@ -548,6 +566,7 @@ public class Stage1 implements Screen, InputProcessor {
         itemAtlas.dispose();
         bulletAtlas.dispose();
         fairiesAtlas.dispose();
+        explotionAtlas.dispose();
     }
 
     @Override
