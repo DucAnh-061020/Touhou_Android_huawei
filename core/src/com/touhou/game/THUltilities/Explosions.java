@@ -26,7 +26,7 @@ public class Explosions {
             else
                 explosionTexture[i] = textureAtlas.findRegion("frame00"+i);
         }
-        explosion = new Animation(70f/16f,explosionTexture);
+        explosion = new Animation(1f/60f,explosionTexture);
     }
 
     public void update(float deltaTime){
