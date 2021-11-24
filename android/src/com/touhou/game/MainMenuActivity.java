@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.HwAds;
+import com.huawei.hms.ads.banner.BannerView;
+
 public class MainMenuActivity extends Activity implements View.OnClickListener{
     Button button;
     Intent intent;
@@ -14,12 +18,17 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        HwAds.init(this);
+
         button = findViewById(R.id.Button1);
         button.setOnClickListener(this);
         button = findViewById(R.id.Button2);
         button.setOnClickListener(this);
         button = findViewById(R.id.Button3);
         button.setOnClickListener(this);
+        BannerView bannerView = findViewById(R.id.hw_banner_view);
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
     }
 
     @Override

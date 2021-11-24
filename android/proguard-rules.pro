@@ -40,3 +40,8 @@
    boolean reportFixture(long);
    float   reportRayFixture(long, float, float, float, float, float);
 }
+
+-keep class com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.** { *; }
+-keep class com.huawei.hms.ads.** {*; }
+-keep interface com.huawei.hms.ads.** {*; }

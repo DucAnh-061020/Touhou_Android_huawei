@@ -6,13 +6,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/menu02"
     tools:context=".MainMenuActivity"
-    android:theme="@style/GdxTheme">
-
+    android:theme="@style/GdxTheme"
+    xmlns:hwads="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.huawei.hms.ads.banner.BannerView
+            android:id="@+id/hw_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            hwads:adId="testw6vs28auh3"
+            hwads:bannerSize="BANNER_SIZE_360_57" />
         <ImageView
             android:id="@+id/icon"
             android:layout_width="wrap_content"
