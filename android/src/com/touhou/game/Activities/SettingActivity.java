@@ -1,10 +1,13 @@
-package com.touhou.game;
+package com.touhou.game.Activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
+
+import com.touhou.game.R;
+import com.touhou.game.staticData.AppSetting;
 
 public class SettingActivity extends Activity implements View.OnClickListener{
 

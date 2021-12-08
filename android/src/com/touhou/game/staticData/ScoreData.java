@@ -1,4 +1,4 @@
-package com.touhou.game;
+package com.touhou.game.staticData;
 
 public class ScoreData {
     public static int point = 0;

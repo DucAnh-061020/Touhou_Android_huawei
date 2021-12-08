@@ -1,4 +1,4 @@
-package com.touhou.game;
+package com.touhou.game.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.huawei.hms.ads.AdParam;
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.ads.banner.BannerView;
+import com.touhou.game.R;
 
 public class MainMenuActivity extends Activity implements View.OnClickListener{
     Button button;
@@ -25,6 +26,8 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
         button = findViewById(R.id.Button2);
         button.setOnClickListener(this);
         button = findViewById(R.id.Button3);
+        button.setOnClickListener(this);
+        button = findViewById(R.id.Button4);
         button.setOnClickListener(this);
         BannerView bannerView = findViewById(R.id.hw_banner_view);
         AdParam adParam = new AdParam.Builder().build();
@@ -43,8 +46,12 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
                 MainMenuActivity.this.startActivity(intent);
                 break;
             case R.id.Button3:
+                intent = new Intent(MainMenuActivity.this,LeaderboardActivity.class);
+                MainMenuActivity.this.startActivity(intent);
+                break;
+            case R.id.Button4:
                 finish();
-                System.exit(0);
+                System.exit(-1);
                 break;
         }
     }

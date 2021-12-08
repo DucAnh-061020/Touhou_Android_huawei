@@ -87,18 +87,18 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.touhou.game/com.touhou.game.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.touhou.game/com.touhou.game.Activities.AndroidLauncher'
 }
 
 dependencies {
-    //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'com.huawei.agconnect:agconnect-core:1.6.0.300'
     implementation 'com.huawei.hms:ads-identifier:3.4.39.302'
     implementation 'com.huawei.hms:ads-installreferrer:3.4.39.302'
-    implementation 'com.huawei.hms:ads-lite:13.4.39.302'
+    implementation 'com.huawei.hms:ads-lite:13.4.49.301'
     implementation 'com.huawei.agconnect:agconnect-cloud-database:1.4.10.300'
 }
 

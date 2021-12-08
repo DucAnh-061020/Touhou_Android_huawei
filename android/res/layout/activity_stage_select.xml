@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/menu02"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".StageSelectActivity"
     android:theme="@style/GdxTheme">
     <Button
         android:id="@+id/stage1"

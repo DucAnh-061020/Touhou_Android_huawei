@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:text="Final Score:"
         android:textSize="30sp"
+        android:textColor="#fff"
         android:fontFamily="@font/fvf_fernando_08"/>
     <TextView
         android:layout_below="@id/txvScoreSum"
@@ -15,9 +16,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter user"
+        android:textColor="#fff"
         android:textSize="30sp"
         android:fontFamily="@font/fvf_fernando_08"/>
     <EditText
+        android:textColor="#000"
         android:id="@+id/edtPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,5 +36,16 @@
         android:fontFamily="@font/fvf_fernando_08"
         android:background="@drawable/custom_button"
         android:textColor="#fff"
-        android:layout_below="@id/edtPlayer"/>
+        android:layout_above="@id/btnReturnSave"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReturnSave"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:text="Back to Menu"
+        android:fontFamily="@font/fvf_fernando_08"
+        android:background="@drawable/custom_button"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

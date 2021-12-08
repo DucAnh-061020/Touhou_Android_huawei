@@ -9,7 +9,7 @@ buildscript {
         maven { url 'https://developer.huawei.com/repo/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.0.2'
         classpath 'com.huawei.agconnect:agcp:1.6.0.300'
     }
 }
@@ -19,7 +19,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "tou hou"
+        appName = "touhou"
         gdxVersion = '1.10.0'
         roboVMVersion = '2.3.12'
         box2DLightsVersion = '1.5'

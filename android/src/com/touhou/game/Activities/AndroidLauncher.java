@@ -1,10 +1,13 @@
-package com.touhou.game;
+package com.touhou.game.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.touhou.game.Core;
+import com.touhou.game.staticData.AppSetting;
+import com.touhou.game.staticData.ScoreData;
 
 public class AndroidLauncher extends AndroidApplication implements Core.MyCallbackListener {
 	Intent intent;

@@ -2,5 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@drawable/menu02">
-
+    <TextView
+        android:id="@+id/tv_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leaderboard"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:fontFamily="@font/fvf_fernando_08"
+        android:textSize="30sp"/>
+    <ListView
+        android:layout_below="@id/tv_leaderboard"
+        android:id="@+id/lv_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="580dp" />
+    <Button
+        android:id="@+id/btn_return_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:background="@drawable/custom_button"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:text="Back to menu"
+        android:fontFamily="@font/fvf_fernando_08"/>
 </RelativeLayout>

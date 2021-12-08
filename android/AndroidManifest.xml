@@ -4,30 +4,29 @@
 
     <application
         android:allowBackup="true"
-        android:appCategory="game"
         android:icon="@drawable/ic_launcher"
         android:isGame="true"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:theme="@style/GdxTheme">
-        <meta-data
-            android:name="com.huawei.hms.client.channel.androidMarket"
-            android:value="false" />
-        <activity android:name=".SaveScoreActivity"></activity>
-        <activity android:name=".MainMenuActivity">
+        <activity android:name=".Activities.MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.huawei.hms.client.channel.androidMarket"
+            android:value="false" />
         <activity
-            android:name=".AndroidLauncher"
+            android:name=".Activities.AndroidLauncher"
             android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".StageSelectActivity" />
-
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.SettingActivity" />
+        <activity android:name=".Activities.StageSelectActivity" />
+        <activity android:name=".Activities.SaveScoreActivity" />
+        <activity android:name=".Activities.LeaderboardActivity"/>
     </application>
+
 </manifest>
